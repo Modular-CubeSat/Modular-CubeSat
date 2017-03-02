@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
     package="com.example.nima.usbarduino2">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <service android:name=".MainActivity" android:label="USBarduino2">
+        <intent-filter>
+            <action android:name="com.example.nima.usbarduino2.MainActivity" />
+        </intent-filter>
+    </service>
+
+    <receiver
+        android:name=".StartOnBoot"
+        android:label="StartOnBoot">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent-filter>
+    </receiver>
+
+    <receiver android:name=".PowerConnectionReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+        </intent-filter>
+    </receiver>
 
     <application
         android:allowBackup="true"
@@ -30,7 +54,11 @@
 
             </intent-filter>
 
-        </activity>
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
