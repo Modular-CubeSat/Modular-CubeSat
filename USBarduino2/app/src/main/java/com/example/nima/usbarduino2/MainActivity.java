@@ -25,20 +25,15 @@ import android.widget.TextView;
 
 import com.felhr.usbserial.UsbSerialDevice;
 import com.felhr.usbserial.UsbSerialInterface;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
-//import com.example.nima.usbarduino2.SensorActivity;
 
 import static com.example.nima.usbarduino2.R.id.textView;
 
-public class MainActivity extends Activity implements SensorEventListener {
+public class MainActivity extends Activity implements SensorEventListener  {
     public final String ACTION_USB_PERMISSION = "com.example.nima.usbarduino2.USB_PERMISSION";
     Button startButton, sendButton, clearButton, stopButton;
     TextView textView;
@@ -47,10 +42,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     UsbDevice device;
     UsbSerialDevice serialPort;
     UsbDeviceConnection connection;
-    //BatteryManager batteryStat;
-    //to see current battery status
 
-    //USED for output formatting
     Sensor light;
     String light_name;
 
@@ -79,8 +71,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 
     int mfield_events = 0;
     int mfield_limit = 20;
-
-    //SensorActivity sensors;
 
 
     UsbSerialInterface.UsbReadCallback mCallback = new UsbSerialInterface.UsbReadCallback() { //Defining a Callback which triggers whenever data is read.
@@ -158,7 +148,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         textView.append(usbManager.toString());
 
         //call sensors
-        //getSensorInfo(20);//sample size
+        //sample size is defined above in the individual variable declarations
 
         //sensor implementation
         sMgr = (SensorManager) this.getSystemService(SENSOR_SERVICE);
@@ -195,10 +185,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 
     public void onClickStart(View view) {
 
-        //textView.append("onClickStar");
-
-        //sensors.onSensorChanged();
-
         HashMap<String, UsbDevice> usbDevices = usbManager.getDeviceList();
         textView.append("Devices:" + Integer.toString(usbDevices.size()) + "\n");
         for (String key : usbDevices.keySet()) {
@@ -232,28 +218,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 
     }
 
-    //decide if you need this damn function
-
-/*    public void getSensorInfo(int times) {
-        //sensor implementation
-        sMgr = (SensorManager) this.getSystemService(SENSOR_SERVICE);
-
-        //light sensor
-        light = sMgr.getDefaultSensor(Sensor.TYPE_LIGHT);
-        light_name = light.getName();
-        sMgr.registerListener(this, light, SensorManager.SENSOR_DELAY_NORMAL);
-
-        //gyroscope
-        gyro = sMgr.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
-        gyro_name = gyro.getName();
-        sMgr.registerListener(this, gyro, SensorManager.SENSOR_DELAY_NORMAL);
-
-        //accelerometer
-        accel = sMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        accel_name = accel.getName();
-        sMgr.registerListener(this, accel, 2000000000);
-    }
-*/
     public final void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
@@ -263,7 +227,6 @@ public class MainActivity extends Activity implements SensorEventListener {
             if(light_events < light_limit) {
                 light_events++;
                 float lux = event.values[0];
-                //tvAppend(textView, "\nlux: " + lux);
                 str += "Light: " + String.valueOf(lux) + "\n";
             }
         }
@@ -302,8 +265,12 @@ public class MainActivity extends Activity implements SensorEventListener {
         accel_events = 0;
         gyro_events = 0;
         mfield_events = 0;
+        BatteryManager bm = (BatteryManager)getSystemService(BATTERY_SERVICE);
+        int batVal = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
+        str = str + "Bat: " + String.valueOf(batVal) + "%";
 
-        str = str + "TV: " + editText.getText().toString();
+
+        str = str + "\nTV: " + editText.getText().toString();
         serialPort.write(str.getBytes());
         tvAppend(textView, "\nData Sent\n" + str + "\n");
         str="";
@@ -322,6 +289,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         sMgr.registerListener(this, light, SensorManager.SENSOR_DELAY_NORMAL);
         sMgr.registerListener(this, gyro, SensorManager.SENSOR_DELAY_NORMAL);
         sMgr.registerListener(this, accel, SensorManager.SENSOR_DELAY_NORMAL);
+        sMgr.registerListener(this, mfield, SensorManager.SENSOR_DELAY_NORMAL);
        }
 
     protected void onPause() {

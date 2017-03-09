@@ -1,0 +1,7 @@
+#Mon Mar 06 22:02:03 PST 2017
+base.0=/Users/areghunanyan/Desktop/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d5b38a677c8a503fefe5d502579841eecee4cd08
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/areghunanyan/Desktop/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c4f53aa5253020481a0e4696c7c58f4a6cbc540b/classes.dex
+base.1=/Users/areghunanyan/Desktop/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c4f53aa5253020481a0e4696c7c58f4a6cbc540b
+file.0=/Users/areghunanyan/Desktop/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d5b38a677c8a503fefe5d502579841eecee4cd08/classes.dex

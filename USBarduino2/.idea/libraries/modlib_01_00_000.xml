@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="modlib-01.00.000">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/modlib-01.00.000.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

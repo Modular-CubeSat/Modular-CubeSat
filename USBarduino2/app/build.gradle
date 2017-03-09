@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 24
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.example.nima.usbarduino2"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 23
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -16,6 +16,8 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
@@ -28,4 +30,5 @@ dependencies {
     compile 'com.android.support:design:25.1.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/usbserial.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
