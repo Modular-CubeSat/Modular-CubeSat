@@ -8,7 +8,12 @@
         android:minSdkVersion="23"
         android:targetSdkVersion="23" />
 
+    <uses-feature android:name="com.motorola.hardware.mods" />
+    <uses-feature android:name="android.hardware.usb.host" />
+
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.motorola.mod.permission.MOD_ACCESS_INFO" />
+    <uses-permission android:name="com.motorola.mod.permission.RAW_PROTOCOL" />
 
     <service
         android:name="com.example.nima.usbarduino2.MainActivity"
@@ -49,6 +54,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_device_filter" />
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 

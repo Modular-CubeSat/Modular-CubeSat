@@ -5,32 +5,32 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="794677750223810"
-    token="5408617043842789883"
+    timestamp="1045836160670338"
+    token="2908872964493910019"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="458" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="285" />
+        duration="0" />
     <task
         name="verifier"
-        duration="51" />
+        duration="0" />
 
     <artifact
-        location="/Users/areghunanyan/Desktop/USBarduino2/app/build/outputs/apk/app-debug.apk"
+        location="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="794677750223810"
+        timestamp="1045836160670338"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/areghunanyan/Desktop/USBarduino2/app/build/outputs/apk/app-debug.apk"
+            location="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
 
