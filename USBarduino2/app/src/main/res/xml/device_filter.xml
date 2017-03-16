@@ -2,3 +2,7 @@
 <resources>
     <usb-device vendor-id="9025" product-id="66" class="2" subclass="2" protocol="1" />
 </resources>
+
+<!--Seeduino vendor-id = "2341" product_id = "8036"-->
+<!--Arduino Mega vendor-id="9025" product-id="66"-->
+<!--ADD WHATEVER DEVICE YOU NEED

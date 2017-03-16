@@ -121,9 +121,9 @@ ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/ap
 	android:name
 		ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/src/main/AndroidManifest.xml:54:25-87
 meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
-ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/src/main/AndroidManifest.xml:56:13-131
+ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/src/main/AndroidManifest.xml:56:13-127
 	android:resource
-		ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/src/main/AndroidManifest.xml:56:87-128
+		ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/src/main/AndroidManifest.xml:56:87-124
 	android:name
 		ADDED from /Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/src/main/AndroidManifest.xml:56:24-86
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT

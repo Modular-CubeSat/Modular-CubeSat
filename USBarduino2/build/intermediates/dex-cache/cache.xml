@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="2be7dc6485deee2db7f2ac97d0ec44bb914a467c">
+        sha1="428716d6b4cd68d7c9bd7a1990cd0533ce5b1630">
         <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e50f3cacc5571c8bc27458d5ce5916081215158c/classes.dex" />
     </item>
     <item
@@ -30,21 +30,84 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/areghunanyan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_6d0b925de6ad6151840ae527589f7b85a2f38afa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_ebdbaad11e34986ce47003234fccee22df0f0894/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_5d5d4699d61b061668fa732578a36e922982339d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_c7df112e571e0cd12d9d0d59c6e43f40764dd3c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_1473b522bdeddb71b8d116805282a690d172aa0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-8.4.0_5a27a464380ec5b8ea6d52bd2a6ab104890cf28e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/libs/modlib-01.00.000.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e1905855d51224d98395146ed3b47539bfd2ea81">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/2/modlib-01.00.000_c990e5ed5f8ba86e061f4a9771c78731e976d24f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3615cdb2311409056dd0e1ddce679e10c18e3516">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b27a49fc11fdffd7d83bf5747fd55992fd9c5b47/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
         <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_44dbcb0071bae6891fb82b5717d6edaf5782fb7b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_f0b37507765c301f7da8d7bce2aa113f734eff18/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,12 +120,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/areghunanyan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_6d0b925de6ad6151840ae527589f7b85a2f38afa/classes.dex" />
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_f0b37507765c301f7da8d7bce2aa113f734eff18/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,39 +156,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_ebdbaad11e34986ce47003234fccee22df0f0894/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_5d5d4699d61b061668fa732578a36e922982339d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d38084015027549951cbaea5d5f6fb795cc81151">
         <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.1.0_83a033cfa0e0d24bcd27e1d2a8c2104ba40ae3e2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_c7df112e571e0cd12d9d0d59c6e43f40764dd3c3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -138,48 +174,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_1473b522bdeddb71b8d116805282a690d172aa0e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/libs/usbserial.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="9f8cbbc9b076ca96a93cc660f1dd6cf8adbca482">
         <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/2/usbserial_8606393000a3c0d5fe331fd849e160e083742903/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-8.4.0_5a27a464380ec5b8ea6d52bd2a6ab104890cf28e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/libs/modlib-01.00.000.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e1905855d51224d98395146ed3b47539bfd2ea81">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/2/modlib-01.00.000_c990e5ed5f8ba86e061f4a9771c78731e976d24f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c80fa3069f0195260b358f0d808cbfbdddb88143">
-        <dex dex="/Users/areghunanyan/Desktop/ModCubeSat/Modular-CubeSat/USBarduino2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b27a49fc11fdffd7d83bf5747fd55992fd9c5b47/classes.dex" />
     </item>
 
 </items>

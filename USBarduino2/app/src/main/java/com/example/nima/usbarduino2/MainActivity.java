@@ -81,7 +81,8 @@ public class MainActivity extends Activity implements SensorEventListener  {
     int mfield_events = 0;
     int mfield_limit = 20;
 
-
+    int sec_delay = 3; //default delay for sending data set to 3 seconds. Used in onClickSend
+    //boolean running = true; //boolean to start/stop data output.
     //MOTO MOD implementatino
 
     public static final String MOD_UID = "mod_uid";
@@ -94,6 +95,25 @@ public class MainActivity extends Activity implements SensorEventListener  {
 
     int temp_events = 0;
     int temp_limit = 20;
+
+    //auto send data implementation
+    Thread thread = new Thread() {
+        @Override
+        public void run() {
+            try {
+                while(true) {
+                    sleep(sec_delay*1000);
+                    if(serialPort!=null) {
+                        //tvAppend(textView, "in wile");
+                        send();//onClickSend(textView);
+                    }
+                    //otherwise will break if you send with no port being available
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    };
 
 
     UsbSerialInterface.UsbReadCallback mCallback = new UsbSerialInterface.UsbReadCallback() { //Defining a Callback which triggers whenever data is read.
@@ -169,7 +189,7 @@ public class MainActivity extends Activity implements SensorEventListener  {
                             serialPort.setFlowControl(UsbSerialInterface.FLOW_CONTROL_OFF);
                             serialPort.read(mCallback);
                             tvAppend(textView, "Serial Connection Opened!\n");
-
+                            //thread.start();
                         } else {
                             Log.d("SERIAL", "PORT NOT OPEN");
                         }
@@ -192,6 +212,7 @@ public class MainActivity extends Activity implements SensorEventListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         usbManager = (UsbManager) getSystemService(USB_SERVICE);
@@ -239,6 +260,7 @@ public class MainActivity extends Activity implements SensorEventListener  {
 
         //MOTO MOD IMPLEMENTATION
         //initPersonality();
+
     }
 
     public void setUiEnabled(boolean bool) {
@@ -249,7 +271,11 @@ public class MainActivity extends Activity implements SensorEventListener  {
     }
 
     public void onClickStart(View view) {
+        start_auto();
+    }
 
+    public void start_auto()
+    {
         HashMap<String, UsbDevice> usbDevices = usbManager.getDeviceList();
         textView.append("Devices:" + Integer.toString(usbDevices.size()) + "\n");
         for (String key : usbDevices.keySet()) {
@@ -285,22 +311,21 @@ public class MainActivity extends Activity implements SensorEventListener  {
     }
 
     public final void onSensorChanged(SensorEvent event) {// The light sensor returns a single value. 
-        if (event.sensor.getName().equals(light_name)) //light data
+        /*if (event.sensor.getName().equals(light_name)) //light data
         {
             if(light_events < light_limit) {
                 light_events++;
                 float lux = event.values[0];
                 str += "Light: " + String.valueOf(lux) + "\n";
             }
-        }
-
-        else if (event.sensor.getName().equals(gyro_name)) //gyro data
+        }*/
+        //else if
+        if (event.sensor.getName().equals(gyro_name)) //gyro data
         {
             if (gyro_events < gyro_limit) {
                 gyro_events++;
 
                 str += "Gyro: " + String.valueOf(event.values[0]) + ", " + String.valueOf(event.values[1]) + ", " + String.valueOf(event.values[2]) + "\n";
-
             }
         }
 
@@ -323,13 +348,19 @@ public class MainActivity extends Activity implements SensorEventListener  {
 
 
     public void onClickSend(View view) {
-        //resets the sensor data collection limit triggers.
+
+        send();
+    }
+
+    public void send()
+    {
+        //tvAppend(textView, "00000000000");
         light_events = 0;
         accel_events = 0;
         gyro_events = 0;
         mfield_events = 0;
         temp_events = 0;
-        BatteryManager bm = (BatteryManager)getSystemService(BATTERY_SERVICE);
+        BatteryManager bm = (BatteryManager) getSystemService(BATTERY_SERVICE);
         int batVal = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
         str = str + "Bat: " + String.valueOf(batVal) + "%";
 
@@ -337,27 +368,31 @@ public class MainActivity extends Activity implements SensorEventListener  {
         str = str + "\nTV: " + editText.getText().toString();
         serialPort.write(str.getBytes());
         tvAppend(textView, "\nData Sent\n" + str + "\n");
-        str="";
-
+        str = "";
     }
 
     public void onClickStop(View view) {
         setUiEnabled(false);
         serialPort.close();
         tvAppend(textView, "\nSerial Connection Closed! \n");
-
     }
 
     protected void onResume() {
         super.onResume();
+        start_auto();
         sMgr.registerListener(this, light, SensorManager.SENSOR_DELAY_NORMAL);
         sMgr.registerListener(this, gyro, SensorManager.SENSOR_DELAY_NORMAL);
         sMgr.registerListener(this, accel, SensorManager.SENSOR_DELAY_NORMAL);
         sMgr.registerListener(this, mfield, SensorManager.SENSOR_DELAY_NORMAL);
 
+        thread.start();
+
 
         /** Initial MDK Personality interface */
-        initPersonality();
+        if (personality==null)
+        {
+            initPersonality();
+        }
        }
 
     protected void onPause() {
@@ -569,5 +604,10 @@ public class MainActivity extends Activity implements SensorEventListener  {
 
             personality.getRaw().executeRaw(cmd2);
         }
+    }
+
+    private void intervalSend()
+    {
+
     }
 }
